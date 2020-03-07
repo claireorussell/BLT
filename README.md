@@ -8,7 +8,7 @@ Tool for some friends to better organise their
 
 We are going to need the following:
 
-* [React](https://reactjs.org/docs/getting-started.html)
+* [React-Native](https://reactjs.org/docs/getting-started.html)
 * [Redux](https://redux.js.org/)
 * [Express](https://expressjs.com/en/api.html)
 * [Knex.js (SQL)](https://knexjs.org/)

@@ -3,8 +3,49 @@
   font-weight: bold;
 }
 
-.wait-indicator {
-  position: absolute;
-  margin-left: 5px;
-  width: 20px;
+body {
+  font-size: 16px;
+  background-color: white;
+  color: rgb(235, 62, 91);
+  font-family: 'Montserrat', sans-serif;;
 }
+
+.mainTitle {
+  text-align: center;
+  font-size: 9rem;
+  margin: 3rem 0rem 2rem 0rem;
+}
+
+/* initialQuestions component*/
+.initialWrapper {
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+}
+
+.questionsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.questionTitle {
+  margin:1rem 5rem;
+}
+
+
+.btn{
+  margin: 1rem;
+  border: pink;
+  color: orange;
+}
+.btn:hover {
+  background-color: white;
+  color: rgb(235, 62, 91);
+}
+.btn:focus, .btn:active{
+  outline: none !important;
+  box-shadow: none;
+  color: rgb(235, 62, 91);
+}
+

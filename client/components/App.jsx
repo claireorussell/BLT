@@ -1,18 +1,18 @@
 import React from 'react'
+import { HashRouter as Router, Route } from 'react-router-dom'
+import initialQuestions from './initialQuestions'
 
-import ErrorMessage from './ErrorMessage'
-import LoadSubreddit from './LoadSubreddit'
-import SubredditList from './SubredditList'
-import WaitIndicator from './WaitIndicator'
 
-const App = () => (
+class App extends React.Component {
+  render() {
+    return(
+  <Router>
   <div className='app'>
-    <ErrorMessage />
-    <LoadSubreddit>
-      <WaitIndicator />
-    </LoadSubreddit>
-    <SubredditList />
+    <h1 className='mainTitle'> BLT </h1>
+    <Route exact path='/' component={initialQuestions}/>
   </div>
-)
+  </Router>
+    )}
+}
 
 export default App

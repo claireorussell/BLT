@@ -8,7 +8,7 @@ Tool for some friends to better organise their
 
 We are going to need the following:
 
-* [React-Native]
+* [React]
 * [Redux]
 * [Express]
 * [Knex ]

@@ -6,46 +6,72 @@
 body {
   font-size: 16px;
   background-color: white;
-  color: rgb(235, 62, 91);
+  color: rgb(242, 110, 132);
   font-family: 'Montserrat', sans-serif;;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+  margin: auto; 
+  justify-content: center;
+}
+
+.logo {
+  width: 10rem;
+  height: 8rem;
+  margin: 5rem 0rem 2rem 0rem;
+  
 }
 
 .mainTitle {
   text-align: center;
-  font-size: 9rem;
-  margin: 3rem 0rem 2rem 0rem;
+  font-size: 12rem;
+  margin: 2rem 0rem 2rem 0rem;
 }
 
 /* initialQuestions component*/
 .initialWrapper {
   display: flex;
   flex-direction: column;
- text-align: center;
+  text-align: center;
 }
 
 .questionsWrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  
 }
 
 .questionTitle {
   margin:1rem 5rem;
+  color: rgb(235, 107, 61);
 }
 
 
 .btn{
   margin: 1rem;
-  border: pink;
-  color: orange;
+  color: rgb(71, 215, 71);
 }
 .btn:hover {
   background-color: white;
   color: rgb(235, 62, 91);
 }
-.btn:focus, .btn:active{
+.btn:focus {
   outline: none !important;
   box-shadow: none;
   color: rgb(235, 62, 91);
 }
 
+
+select {
+  margin: 1rem;
+  border:none;
+  appearance: none;
+  color: rgb(71, 215, 71);
+}
+select:focus {
+  color:  rgb(235, 62, 91);
+  outline: none !important;
+} 

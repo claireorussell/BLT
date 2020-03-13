@@ -56,12 +56,12 @@ Local state (Client Side)
 
   | type | data | purpose |
   | --- | --- | --- |
-  | SET_HOMEOWNER | none | to hold homeOwner status of true or false to make certain areas visible |
-  | SET_WAGE | none | keep the weekly wage in hand for the user|
-  | SET_SAVINGGOAL | none | total saving goal |
-  | SET_EXPENSES | none | user total for each area of spending (necessary, savings, unnecessary) |
-  | UPDATE_ALLOCATED | none | running total |
-  | UPDATE_REMAINING | none | money remaining to be allocated |
+  | SET_HOMEOWNER | homeOwner | to hold homeOwner status of true or false to make certain areas visible |
+  | SET_WAGE | wage | keep the weekly wage in hand for the user|
+  | SET_SAVINGGOAL | savingGoal | total saving goal |
+  | SET_EXPENSES | expenses | user total for each area of spending (necessary, savings, unnecessary) |
+  | UPDATE_ALLOCATED | totalAllocated | running total |
+  | UPDATE_REMAINING | totalRemaining | money remaining to be allocated |
   | GET_HINTS | hints | gets the relevant hint based on input |
 
 

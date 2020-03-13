@@ -14,19 +14,35 @@ We are going to need the following:
 * [Knex ]
 * [Sqlite3]
 
+Questions
+- are you a home owner
+- what's your weekly wage 
+- what's your saving goal for the year 
+- two personal spending areas
+
+Reducer
+- user total for each area (necessary, savings, unnecessary)
+- weekly wage in hand
+- Total saving goal
+- running total 
+- money remaining to be allocated 
 
 
 User Stories
 As a user I should be able to...
 
-Set my pay frequency (pay period)
+Set my weekly pay $
 See my essential spending for the pay period
-See my total saving for the pay period 
-Divide up savings into different groupings 
-    - Holidays
-    - Wearables 
-    - Self spending 
-    - Long term saving 
+    - rent/mortgage 
+    - rates/water 
+    - 
+See my total saving for the pay period
+    - Long term saving (set)
+    - Home maintenance $
+Divide my remaining money into the unnecessary spending options i've indicated
+    - Holidays $10 wk
+    - Wearables $5 wk 
+    
 See the total over the course of a year for each spending category 
 See the total over the course of a year for each saving category 
 

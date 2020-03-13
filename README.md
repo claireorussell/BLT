@@ -11,15 +11,12 @@ We are going to need the following:
 * [React]
 * [Redux]
 * [Express]
-* [Knex ]
-* [Sqlite3]
 
 Questions
 - are you a home owner
 - what's your weekly wage 
 - what's your saving goal for the year 
-- two personal spending area
-
+- what are your two personal spending areas
 
 
 User Stories

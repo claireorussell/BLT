@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   background-color: white;
   color: rgb(242, 110, 132);
-  font-family: 'Montserrat', sans-serif;;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .titleWrapper {
@@ -41,6 +41,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: rgb(71, 215, 71);
+  font-size: 1.2rem;
   
 }
 
@@ -81,3 +83,11 @@ select:focus {
   color:  rgb(235, 62, 91);
   outline: none !important;
 } 
+
+input {
+  color: rgb(71, 215, 71);
+  outline: none !important;
+  border: none;
+  border-bottom: rgb(255, 196, 0) 0.01rem solid;
+  padding: 0.1rem;
+}

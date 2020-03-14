@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
 
-import subreddits from './subreddits'
+import user from './user'
+import totalRemaining from './totalRemaining'
 
 export default combineReducers({
-
-  subreddits,
-  
+  user,
+  totalRemaining,
 })

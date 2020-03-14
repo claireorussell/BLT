@@ -1,10 +1,41 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import { setUser } from '../actions'
+import { setTotalRemaining } from '../actions'
+
 class initialQuestions extends React.Component {
     constructor(props) {
         super(props)
+
+
+        this.state = {
+            user: {
+                wage: '',
+                savingGoal: '',
+                homeOwner: 'true',
+                treatSpending1: '',
+                treatSpending2: '',
+            },
+        }
     }
+
+    handleChange = (evt) => {
+        this.setState({
+            user: {
+                ...this.state.user,
+                [evt.target.name]: evt.target.value
+            }
+        })
+    }
+
+    handleSubmit = (evt) => {
+        evt.preventDefault()
+        this.props.dispatch(setUser(this.state.user))
+        this.props.dispatch(setTotalRemaining(this.state.user.wage))
+        this.props.history.push("/expenses")
+    }
+
 
     render() {
         return (
@@ -13,55 +44,53 @@ class initialQuestions extends React.Component {
                 <h1 className='questionTitle'>What's your weekly wage?</h1>
                 <div className='questionWrapper'>
                     $  <input
-                        class="input"
-                    // type='text'
-                    // name='name'
-                    // value={this.state.savingGoal}
-                    // onChange={this.handleChange}
+                        className="input"
+                        type='text'
+                        name='wage'
+                        value={this.state.user.wage}
+                        onChange={this.handleChange}
                     />
                 </div>
-
 
                 <h1 className='questionTitle'>What is your saving goal for the year?</h1>
                 <div className='questionWrapper'>
                     $  <input
-                        class="input"
-                    // type='text'
-                    // name='name'
-                    // value={this.state.savingGoal}
-                    // onChange={this.handleChange}
+                        className="input"
+                        type='text'
+                        name='savingGoal'
+                        value={this.state.user.savingGoal}
+                        onChange={this.handleChange}
                     />
                 </div>
 
                 <h1 className='questionTitle'>Are you a home owner?</h1>
                 <div className='questionWrapper'>
-                    <button className="btn">yes</button>
-                    <button className="btn">no</button>
+                    <button name='homeOwner' value={'true'} onClick={this.handleChange} className="btn">yes</button>
+                    <button name='homeOwner' value={'false'} onClick={this.handleChange}  className="btn">no</button>
                 </div>
 
                 <h1 className='questionTitle'>Pick two things you like to spend money on as a treat!</h1>
                 <div className='questionWrapper'>
                     <div className='questionColumn1'>
-                        {/* change to input drop down */}
-                        <select id="option1" name="treat1">
-                            <option value="eating">Food and drink</option>
-                            <option value="entertainment">Entertainment</option>
-                            <option value="adventure">Adventure activies</option>
-                            <option value="materialistics">Materialistic stuff</option>
-                            <option value="vehicles">Vehicles</option>
+                        <select id="option1" name="treatSpending1" onChange={this.handleChange}>
+                            <option value="Eating">Food and drink</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Adventure">Adventure activies</option>
+                            <option value="Materialistics">Materialistic stuff</option>
+                            <option value="Hobbies">Hobbies</option>
                         </select>
                     </div>
                     <div className='questionColumn2'>
-                        <select id="option2" name="treat2">
-                            <option value="eating">Food and drink</option>
-                            <option value="entertainment">Entertainment</option>
-                            <option value="adventure">Adventure activies</option>
-                            <option value="materialistics">Materialistic stuff</option>
-                            <option value="vehicles">Vehicles</option>
+                        <select id="option2" name="treatSpending2" onChange={this.handleChange}>
+                            <option value="Eating">Food and drink</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Adventure">Adventure activies</option>
+                            <option value="Materialistics">Materialistic stuff</option>
+                            <option value="Hobbies">Hobbies</option>
                         </select>
                     </div>
                 </div>
-                <button className='btn btnNext'>next</button>
+                <button className='btn btnNext' onClick={this.handleSubmit}>next</button>
             </div>
         )
     }

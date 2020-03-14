@@ -1,12 +1,10 @@
 # BLT
 Budgeting life tool
 
-Tool for some friends to better organise their
+Tool for some friends to better organise their money, or lack of.
 
 
 ## The Tech
-
-We are going to need the following:
 
 * [React]
 * [Redux]

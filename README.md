@@ -6,18 +6,18 @@ Tool for some friends to better organise their money, or lack of.
 
 ## The Tech
 
-* [React]
-* [Redux]
-* [Express]
+* React
+* Redux
+* Express
 
-Questions
+## Questions
 - are you a home owner
 - what's your weekly wage 
 - what's your saving goal for the year 
 - what are your two personal spending areas
 
 
-User Stories
+## User Stories
 As a user I should be able to...
 
 Set my weekly pay $

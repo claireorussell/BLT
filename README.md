@@ -42,9 +42,7 @@ Local state (Client Side)
 
   | name | purpose |
   | --- | --- |
-  | homeOwner | True or false |
-  | wage | weekly wage in hand |
-  | savingGoal | total saving goal |
+  | user | homeOwner: True or false && weekly wage in hand && total yearly saving goal && two areas of treatSpending |
   | expenses | user total for each area of spending (necessary, savings, unnecessary) |
   | totalAllocated | running total |
   | totalRemaining | money remaining to be allocated |
@@ -54,28 +52,8 @@ Local state (Client Side)
 
   | type | data | purpose |
   | --- | --- | --- |
-  | SET_HOMEOWNER | homeOwner | to hold homeOwner status of true or false to make certain areas visible |
-  | SET_WAGE | wage | keep the weekly wage in hand for the user|
-  | SET_SAVINGGOAL | savingGoal | total saving goal |
+  | SET_USER | user | to hold initail info of user, wage, saving goal, homeowner and treatSpending |
   | SET_EXPENSES | expenses | user total for each area of spending (necessary, savings, unnecessary) |
   | UPDATE_ALLOCATED | totalAllocated | running total |
   | UPDATE_REMAINING | totalRemaining | money remaining to be allocated |
   | GET_HINTS | hints | gets the relevant hint based on input |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

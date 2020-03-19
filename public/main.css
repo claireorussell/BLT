@@ -3,8 +3,98 @@
   font-weight: bold;
 }
 
-.wait-indicator {
-  position: absolute;
-  margin-left: 5px;
-  width: 20px;
+body {
+  font-size: 16px;
+  background-color: white;
+  color: rgb(242, 110, 132);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+  margin: auto; 
+  justify-content: center;
+}
+
+.logo {
+  width: 8rem;
+  height: 6rem;
+  margin: 4rem 0rem 2rem 0rem;
+  
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 10rem;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+/* initialQuestions component*/
+.initialWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.questionWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgb(71, 215, 71);
+  font-size: 1.2rem;
+  
+}
+
+.questionTitle {
+  margin: 0.5rem 5rem;
+  color: rgb(235, 107, 61);
+}
+
+
+.btn{
+  margin: 0rem 1rem;
+  color: rgb(71, 215, 71);
+  font-size: 1.5rem;
+}
+.btn:hover {
+  background-color: white;
+  color: rgb(235, 62, 91);
+}
+.btn:focus {
+  outline: none !important;
+  box-shadow: none;
+  color: rgb(235, 62, 91);
+}
+
+.btnControl {
+  width: 3rem;
+  height: 5rem;
+  justify-content: center;
+  margin: 0rem 2rem;
+} */
+
+.btnControl:hover {
+  width: 6rem; 
+}
+
+select {
+  margin: 1rem;
+  border:none;
+  appearance: none;
+  color: rgb(71, 215, 71);
+}
+select:focus {
+  color:  rgb(235, 62, 91);
+  outline: none !important;
+} 
+
+input {
+  color: rgb(71, 215, 71);
+  outline: none !important;
+  border: none;
+  border-bottom: rgb(255, 196, 0) 0.01rem solid;
+  padding: 0.1rem;
 }

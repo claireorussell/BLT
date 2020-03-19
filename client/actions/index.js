@@ -1,39 +1,34 @@
 import request from 'superagent'
 
-export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const REQUEST_POSTS = 'REQUEST_POSTS'
 
-export const requestPosts = () => {
+export const setUser = (user) => {
   return {
-    type: REQUEST_POSTS
+    type: 'SET_USER', 
+    user: user,
   }
 }
 
-export const receivePosts = (posts) => {
+// Keeping record of total money left to be allocated 
+
+export const setTotalRemaining = (income) => {
   return {
-    type: RECEIVE_POSTS,
-    posts: posts.map(post => post.data)
+    type: 'SET_REMAINING', 
+    totalRemaining: income
   }
 }
 
-export const showError = (errorMessage) => {
+
+export const updateRemaining = (totalRemaining) => {
   return {
-    type: SHOW_ERROR,
-    errorMessage: errorMessage
+    type: 'UPDATE_REMAINING',
+    totalRemaining: totalRemaining
   }
 }
 
-export function fetchPosts (subreddit) {
-  return (dispatch) => {
-    dispatch(requestPosts())
-    return request
-      .get(`/api/v1/reddit/subreddit/${subreddit}`)
-      .then(res => {
-        dispatch(receivePosts(res.body))
-      })
-      .catch(err => {
-        dispatch(showError(err.message))
-      })
+export const setExpenses = (expenses) => {
+  return {
+    type: 'SET_EXPENSES', 
+    expenses: expenses
   }
 }
+

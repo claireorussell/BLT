@@ -25,7 +25,7 @@ class initialQuestions extends React.Component {
             user: {
                 ...this.state.user,
                 [evt.target.name]: evt.target.value
-            }
+            }, 
         })
     }
 
@@ -65,7 +65,8 @@ class initialQuestions extends React.Component {
 
                 <h1 className='questionTitle'>Are you a home owner?</h1>
                 <div className='questionWrapper'>
-                    <button name='homeOwner' value={'true'} onClick={this.handleChange} className="btn">yes</button>
+                {/* <button name='homeOwner' value={'true'} onClick={this.handleChange} className={`btn ${this.state.homeOwner ? 'btnActive' : ''}`}>yes</button> */}
+                <button name='homeOwner' value={'true'} onClick={this.handleChange} className="btn" >yes</button>
                     <button name='homeOwner' value={'false'} onClick={this.handleChange}  className="btn">no</button>
                 </div>
 

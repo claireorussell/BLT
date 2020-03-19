@@ -13,7 +13,7 @@ class initialQuestions extends React.Component {
             user: {
                 wage: '',
                 savingGoal: '',
-                homeOwner: 'true',
+                homeOwner: 'false',
                 treatSpending1: '',
                 treatSpending2: '',
             },
@@ -90,7 +90,9 @@ class initialQuestions extends React.Component {
                         </select>
                     </div>
                 </div>
-                <button className='btn btnNext' onClick={this.handleSubmit}>next</button>
+                <div>
+                <img className='btnControl'  onClick={this.handleSubmit} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRahtMw7DMciTwaEEWVa2FvOuozWTt3-9fD7E7OqcHYswClHoOT" alt=""/>
+                </div>
             </div>
         )
     }

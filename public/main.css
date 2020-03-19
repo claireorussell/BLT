@@ -27,7 +27,7 @@ body {
 .mainTitle {
   text-align: center;
   font-size: 10rem;
-  margin: 1rem 0rem 2rem 0rem;
+  margin: 1rem 0rem 1rem 0rem;
 }
 
 /* initialQuestions component*/
@@ -35,6 +35,8 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
+  
 }
 
 .questionWrapper {
@@ -67,11 +69,16 @@ body {
   color: rgb(235, 62, 91);
 }
 
-.btnNext {
-  font-size: 2rem;
-  color: rgb(255, 196, 0);
-}
+.btnControl {
+  width: 3rem;
+  height: 5rem;
+  justify-content: center;
+  margin: 0rem 2rem;
+} */
 
+.btnControl:hover {
+  width: 6rem; 
+}
 
 select {
   margin: 1rem;

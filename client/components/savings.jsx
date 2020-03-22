@@ -1,43 +1,36 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { setExpenses } from '../actions'
-import { updateRemaining } from '../actions'
-
-class necessaryExpenses extends React.Component {
+class savings extends React.Component {
     constructor(props) {
         super(props)
-
         this.state = {
-            necessaryExpenses: {
-                rentOrMortgage: '',
-                utilities: '',
-                food: '',
-                transport: '',
-                donations: '',
-            },
-            balance: 0,
-            totalRemaining: Number(this.props.totalRemaining),
+            totalRemaining: this.props.totalRemaining,
+            savings: {
+                savingGoal: Math.floor(this.props.user.savingGoal / 52),
+                backUp: '',
+                treat1: '',
+                treat2: '',
+                holidays: '',
+            }
         }
     }
 
-
     handleChange = (evt) => {
         this.setState({
-            necessaryExpenses: {
-                ...this.state.necessaryExpenses,
+            savings: {
+                ...this.state.savings,
                 [evt.target.name]: Number(evt.target.value)
             },
         })
     }
 
-    handleClick = () => {
+    handleClick = (evt) => {
         this.setState({
-            balance: this.state.necessaryExpenses.rentOrMortgage + this.state.necessaryExpenses.utilities + this.state.necessaryExpenses.food + this.state.necessaryExpenses.transport,
-            totalRemaining: this.props.user.wage - this.state.balance
+            balance: this.state.savings.savingGoal + this.state.savings.backUp + this.state.savings.treat1 + this.state.savings.treat2 + this.state.savings.holidays,
+            totalRemaining: this.props.totalRemaining - this.state.balance
         })
     }
-
 
     handleSubmit = (evt) => {
         evt.preventDefault()
@@ -53,60 +46,55 @@ class necessaryExpenses extends React.Component {
     }
 
     render() {
-        console.log(this.props.expenses)
+        console.log(this.props.user)
         return (
             <div className='initialWrapper'>
-                <h3>Essential weekly spending total remaining ${this.state.totalRemaining}</h3>
-                {this.props.user.homeOwner == 'true' ? <h1 className='questionTitle'>Mortgage and rates</h1>
-                    : <h1 className='questionTitle'>Rent payment</h1>}
+                <h3>Weekly Saving: total remaining ${this.state.totalRemaining}</h3>
+                <h1 className='questionTitle'>Weekly saving goal</h1>
                 <div className='questionWrapper'>
                     $  <input
                         className="input"
                         type='text'
-                        name='rentOrMortgage'
-                        value={this.state.necessaryExpenses.rentOrMortgage}
+                        name='savingGoal'
+                        value={this.state.savings.savingGoal}
                         onChange={this.handleChange}
                         onBlur={this.handleClick}
                     />
                 </div>
-                <h1 className='questionTitle'>Utilities and internet</h1>
+                <h1 className='questionTitle'>Back-up & Holiday savings</h1>
                 <div className='questionWrapper'>
                     $  <input
                         className="input"
                         type='text'
-                        name='utilities'
-                        value={this.state.necessaryExpenses.utilities}
+                        name='backUp'
+                        value={this.state.savings.backUp}
                         onChange={this.handleChange}
-                        // onClick={this.handleClick}
                         onBlur={this.handleClick}
                     />
                 </div>
-                <h1 className='questionTitle'>Food and home essentials</h1>
+                <h1 className='questionTitle'>{this.props.user.treatSpending1} </h1>
                 <div className='questionWrapper'>
-                    $  <input
+                    $<input
                         className="input"
                         type='text'
-                        name='food'
-                        value={this.state.necessaryExpenses.food}
+                        name='treat1'
+                        value={this.state.savings.treat1}
                         onChange={this.handleChange}
-                        // onClick={this.handleClick}
                         onBlur={this.handleClick}
                     />
                 </div>
-                <h1 className='questionTitle'>Transport</h1>
-                <div className='questionWrapper'>
-                    $  <input
+                
+                    <h1 className='questionTitle'>{this.props.user.treatSpending2} </h1>
+                    <div className='questionWrapper'>
+                        $<input
                         className="input"
                         type='text'
-                        name='transport'
-                        value={this.state.necessaryExpenses.transport}
+                        name='treat2'
+                        value={this.state.savings.treat2}
                         onChange={this.handleChange}
-                        // onClick={this.handleClick}
                         onBlur={this.handleClick}
                     />
                 </div>
-
-
                 <div>
                     <img className="btnControl" onClick={this.handleBack} src="https://www.iconsdb.com/icons/preview/orange/arrow-97-xl.png" alt="" />
                     <img className='btnControl' onClick={this.handleSubmit} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRahtMw7DMciTwaEEWVa2FvOuozWTt3-9fD7E7OqcHYswClHoOT" alt="" />
@@ -125,4 +113,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(necessaryExpenses)
+export default connect(mapStateToProps)(savings)

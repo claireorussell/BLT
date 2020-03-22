@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import initialQuestions from './initialQuestions'
 import necessaryExpenses from './necessaryExpenses'
+import savings from './savings'
 
 
 class App extends React.Component {
@@ -15,6 +16,8 @@ class App extends React.Component {
           </div>
           <Route exact path='/' component={initialQuestions} />
           <Route path='/expenses' component={necessaryExpenses} />
+          <Route path='/savings' component={savings} />
+          {/* <Route path='/non-essentials' component={nonEssentialExpenses} /> */}
         </div>
       </Router>
     )

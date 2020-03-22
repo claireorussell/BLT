@@ -14,8 +14,8 @@ class initialQuestions extends React.Component {
                 wage: '',
                 savingGoal: '',
                 homeOwner: 'false',
-                treatSpending1: '',
-                treatSpending2: '',
+                treatSpending1: 'Food & Drink',
+                treatSpending2: 'Food & Drink',
             },
         }
     }
@@ -74,19 +74,19 @@ class initialQuestions extends React.Component {
                 <div className='questionWrapper'>
                     <div className='questionColumn1'>
                         <select id="option1" name="treatSpending1" onChange={this.handleChange}>
-                            <option value="Eating">Food and drink</option>
+                            <option value="Food & Drink">Food and drink</option>
                             <option value="Entertainment">Entertainment</option>
-                            <option value="Adventure">Adventure activies</option>
-                            <option value="Materialistics">Materialistic stuff</option>
+                            <option value="Adventure & Activities">Adventure activies</option>
+                            <option value="Materialistic shit">Materialistic stuff</option>
                             <option value="Hobbies">Hobbies</option>
                         </select>
                     </div>
                     <div className='questionColumn2'>
                         <select id="option2" name="treatSpending2" onChange={this.handleChange}>
-                            <option value="Eating">Food and drink</option>
+                            <option value="Food & Drink">Food and drink</option>
                             <option value="Entertainment">Entertainment</option>
-                            <option value="Adventure">Adventure activies</option>
-                            <option value="Materialistics">Materialistic stuff</option>
+                            <option value="Adventure & Activities">Adventure activies</option>
+                            <option value="Materialistic shit">Materialistic stuff</option>
                             <option value="Hobbies">Hobbies</option>
                         </select>
                     </div>

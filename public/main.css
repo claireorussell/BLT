@@ -62,9 +62,10 @@ body {
 .btn:hover {
   background-color: white;
   color: rgb(235, 62, 91);
+
 }
 .btn:focus {
-  outline: none !important;
+  outline: none;
   box-shadow: none;
   color: rgb(235, 62, 91);
 }
@@ -74,7 +75,7 @@ body {
   height: 5rem;
   justify-content: center;
   margin: 0rem 2rem;
-} */
+} 
 
 .btnControl:hover {
   width: 6rem; 
@@ -98,3 +99,10 @@ input {
   border-bottom: rgb(255, 196, 0) 0.01rem solid;
   padding: 0.1rem;
 }
+
+.treatYoSelf {
+  margin: 1rem;
+  color: rgb(235, 62, 91);
+  padding: 0rem;
+  
+} 

@@ -19,6 +19,7 @@ export const setTotalRemaining = (income) => {
 
 
 export const updateRemaining = (totalRemaining) => {
+  console.log(totalRemaining)
   return {
     type: 'UPDATE_REMAINING',
     totalRemaining: totalRemaining

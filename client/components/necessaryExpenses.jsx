@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { setExpenses } from '../actions'
 import { updateRemaining } from '../actions'
 
-class necessaryExpenses extends React.Component {
+class NecessaryExpenses extends React.Component {
     constructor(props) {
         super(props)
 
@@ -66,7 +66,8 @@ class necessaryExpenses extends React.Component {
                         name='rentOrMortgage'
                         value={this.state.necessaryExpenses.rentOrMortgage}
                         onChange={this.handleChange}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 <h1 className='questionTitle'>Utilities and internet</h1>
@@ -77,8 +78,8 @@ class necessaryExpenses extends React.Component {
                         name='utilities'
                         value={this.state.necessaryExpenses.utilities}
                         onChange={this.handleChange}
-                        // onClick={this.handleClick}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 <h1 className='questionTitle'>Food and home essentials</h1>
@@ -89,8 +90,8 @@ class necessaryExpenses extends React.Component {
                         name='food'
                         value={this.state.necessaryExpenses.food}
                         onChange={this.handleChange}
-                        // onClick={this.handleClick}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 <h1 className='questionTitle'>Transport</h1>
@@ -101,16 +102,16 @@ class necessaryExpenses extends React.Component {
                         name='transport'
                         value={this.state.necessaryExpenses.transport}
                         onChange={this.handleChange}
-                        // onClick={this.handleClick}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
 
 
                 <div>
-                    <img className="btnControl" onClick={this.handleBack} src="https://www.iconsdb.com/icons/preview/orange/arrow-97-xl.png" alt="" />
+                    <img className="btnControl" onClick={this.handleBack} src="https://www.iconsdb.com/icons/preview/orange/arrow-97-xl.png" alt="back" />
                     <img className='btnControl' onClick={this.handleSubmit} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRahtMw7DMciTwaEEWVa2FvOuozWTt3-9fD7E7OqcHYswClHoOT" alt="" />
-                </div>
+                </div> 
 
             </div>
         )
@@ -125,4 +126,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(necessaryExpenses)
+export default connect(mapStateToProps)(NecessaryExpenses)

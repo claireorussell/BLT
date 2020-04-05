@@ -17,7 +17,6 @@ export const setTotalRemaining = (income) => {
   }
 }
 
-
 export const updateRemaining = (totalRemaining) => {
   console.log(totalRemaining)
   return {
@@ -30,6 +29,13 @@ export const setExpenses = (expenses) => {
   return {
     type: 'SET_EXPENSES', 
     expenses: expenses
+  }
+}
+
+export const setSavings = (savings) => {
+  return {
+    type: 'SET_SAVINGS', 
+    savings: savings
   }
 }
 

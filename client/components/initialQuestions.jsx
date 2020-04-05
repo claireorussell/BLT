@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { setUser } from '../actions'
 import { setTotalRemaining } from '../actions'
 
-class initialQuestions extends React.Component {
+class InitialQuestions extends React.Component {
     constructor(props) {
         super(props)
 
@@ -28,6 +28,8 @@ class initialQuestions extends React.Component {
             }, 
         })
     }
+
+    
 
     handleSubmit = (evt) => {
         evt.preventDefault()
@@ -103,4 +105,4 @@ class initialQuestions extends React.Component {
 
 }
 
-export default connect()(initialQuestions)
+export default connect()(InitialQuestions)

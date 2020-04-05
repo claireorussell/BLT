@@ -1,18 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-class savings extends React.Component {
+import {setSavings} from '../actions'
+import {updateRemaining} from '../actions'
+
+class Savings extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            balance: 0,
             totalRemaining: this.props.totalRemaining,
             savings: {
                 savingGoal: Math.floor(this.props.user.savingGoal / 52),
                 backUp: '',
                 treat1: '',
                 treat2: '',
-                holidays: '',
             }
+            // Array.reduce((savingGoal, backUp,...) => savingGoal + backUp + .....)
         }
     }
 
@@ -27,21 +31,21 @@ class savings extends React.Component {
 
     handleClick = (evt) => {
         this.setState({
-            balance: this.state.savings.savingGoal + this.state.savings.backUp + this.state.savings.treat1 + this.state.savings.treat2 + this.state.savings.holidays,
-            totalRemaining: this.props.totalRemaining - this.state.balance
+            balance: this.state.savings.savingGoal + this.state.savings.backUp + this.state.savings.treat1 + this.state.savings.treat2,
+            totalRemaining: Number(this.props.totalRemaining - this.state.balance)
         })
     }
 
     handleSubmit = (evt) => {
         evt.preventDefault()
-        this.props.dispatch(setExpenses(this.state.necessaryExpenses))
+        this.props.dispatch(setSavings(this.state.savings))
         this.props.dispatch(updateRemaining(this.state.totalRemaining))
-        this.props.history.push('/savings')
+        this.props.history.push('/totals')
     }
 
     handleBack = (evt) => {
         evt.preventDefault()
-        this.props.history.push('/')
+        this.props.history.push('/necessaryExpenses')
 
     }
 
@@ -58,7 +62,8 @@ class savings extends React.Component {
                         name='savingGoal'
                         value={this.state.savings.savingGoal}
                         onChange={this.handleChange}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 <h1 className='questionTitle'>Back-up & Holiday savings</h1>
@@ -69,7 +74,8 @@ class savings extends React.Component {
                         name='backUp'
                         value={this.state.savings.backUp}
                         onChange={this.handleChange}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 <h1 className='questionTitle'>{this.props.user.treatSpending1} </h1>
@@ -80,7 +86,8 @@ class savings extends React.Component {
                         name='treat1'
                         value={this.state.savings.treat1}
                         onChange={this.handleChange}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 
@@ -92,11 +99,12 @@ class savings extends React.Component {
                         name='treat2'
                         value={this.state.savings.treat2}
                         onChange={this.handleChange}
-                        onBlur={this.handleClick}
+                        onClick={this.handleClick}
+                        onFocus={this.handleClick}
                     />
                 </div>
                 <div>
-                    <img className="btnControl" onClick={this.handleBack} src="https://www.iconsdb.com/icons/preview/orange/arrow-97-xl.png" alt="" />
+                    <img className="btnControl" onClick={this.handleBack} src="https://www.iconsdb.com/icons/preview/orange/arrow-97-xl.png" alt="back" />
                     <img className='btnControl' onClick={this.handleSubmit} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRahtMw7DMciTwaEEWVa2FvOuozWTt3-9fD7E7OqcHYswClHoOT" alt="" />
                 </div>
 
@@ -113,4 +121,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(savings)
+export default connect(mapStateToProps)(Savings)

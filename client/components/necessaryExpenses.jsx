@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { setExpenses } from '../actions'
 import { updateRemaining } from '../actions'
 
-class NecessaryExpenses extends React.Component {
+class necessaryExpenses extends React.Component {
     constructor(props) {
         super(props)
 
@@ -126,4 +126,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(NecessaryExpenses)
+export default connect(mapStateToProps)(necessaryExpenses)

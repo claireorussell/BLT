@@ -1,8 +1,8 @@
 import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
-import InitialQuestions from './InitialQuestions'
-import NecessaryExpenses from './NecessaryExpenses'
-import Savings from './Savings'
+import InitialQuestions from './initialQuestions'
+import NecessaryExpenses from './necessaryExpenses'
+import Savings from './savings'
 import Totals from './Totals'
 
 class App extends React.Component {

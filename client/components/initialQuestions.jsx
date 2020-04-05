@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { setUser } from '../actions'
 import { setTotalRemaining } from '../actions'
 
-class InitialQuestions extends React.Component {
+class initialQuestions extends React.Component {
     constructor(props) {
         super(props)
 
@@ -105,4 +105,4 @@ class InitialQuestions extends React.Component {
 
 }
 
-export default connect()(InitialQuestions)
+export default connect()(initialQuestions)

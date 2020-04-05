@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import {setSavings} from '../actions'
 import {updateRemaining} from '../actions'
 
-class Savings extends React.Component {
+class savings extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -121,4 +121,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Savings)
+export default connect(mapStateToProps)(savings)

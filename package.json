@@ -1,6 +1,9 @@
 {
   "name": "boilerplate-redux-async",
   "version": "0.1.2",
+  "engines": {
+    "node": "12.16.0"
+  },
   "description": "React Redux with simple async action",
   "main": "server/index",
   "scripts": {

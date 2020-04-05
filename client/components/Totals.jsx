@@ -7,18 +7,6 @@ class Totals extends React.Component {
         super(props)
     }
 
-
-
-
-    // backUp: '',
-
-    // holidays: '',
-
-
-    // food: '',
-    // transport: '',
-    // donations: '',
-
     render() {
         let user = this.props.user
         let expenses = this.props.expenses
@@ -28,22 +16,15 @@ class Totals extends React.Component {
         let treatSpending = savings.treat1 + savings.treat2
         return (
             <div className='initialWrapper'>
-                <h2>Weekly income</h2>
-                <ul>
-                    <p>Wage: {user.wage}</p>
-                </ul>
-            <p>Split your accounts into these 5 to keep track of your spending and saving!</p>
-                <h2>Spending</h2>
-                <ul>
-                    <p>Home and transport: {homeCosts}</p>
-                    <p>Fun Money: {treatSpending}</p>
-                </ul>
-
-                <h2>Savings</h2>
-                <ul>
-                    <p>Weekly savings: {savings.savingGoal}</p>
-                    <p>Holidays: {savings.backUp}</p>
-                </ul>
+                <h2 className='questionTitle'>Weekly income</h2>
+                    <p className='totals'>Wage: ${user.wage}</p>
+            <p className='tips'>Separate your spending and saving with five accounts!</p>
+                <h2 className='questionTitle'>Spending</h2>
+                    <p className='totals'>Home and transport: ${homeCosts}</p>
+                    <p className='totals'>Fun Money: ${treatSpending}</p>
+                <h2 className='questionTitle'>Savings</h2>
+                    <p className='totals'>Weekly savings: ${savings.savingGoal}</p>
+                    <p className='totals'>Holidays: ${savings.backUp}</p>
             </div>
         )
     }

@@ -75,7 +75,7 @@ class InitialQuestions extends React.Component {
                 <h1 className='questionTitle'>Pick two things you like to spend money on as a treat!</h1>
                 <div className='questionWrapper'>
                     <div className='questionColumn1'>
-                        <select id="option1" name="treatSpending1" onChange={this.handleChange}>
+                        <select id="option1" className='treatDropDown' name="treatSpending1" onChange={this.handleChange}>
                             <option value="Food & Drink">Food and drink</option>
                             <option value="Entertainment">Entertainment</option>
                             <option value="Adventure & Activities">Adventure activies</option>
@@ -84,7 +84,7 @@ class InitialQuestions extends React.Component {
                         </select>
                     </div>
                     <div className='questionColumn2'>
-                        <select id="option2" name="treatSpending2" onChange={this.handleChange}>
+                        <select id="option2" className='treatDropDown' name="treatSpending2" onChange={this.handleChange}>
                             <option value="Food & Drink">Food and drink</option>
                             <option value="Entertainment">Entertainment</option>
                             <option value="Adventure & Activities">Adventure activies</option>
